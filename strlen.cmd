@@ -1,8 +1,10 @@
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :: \file      strlen.cmd
 :: \author    SENOO, Ken
 :: \copyright CC0
 :: \brief     Count string length.
 :: \sa        https://senooken.jp/blog//
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :strlen
   @echo off
