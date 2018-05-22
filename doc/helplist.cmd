@@ -22,7 +22,7 @@ set OUTDIR=%VER%\help
 if not exist "%OUTDIR%" mkdir "%OUTDIR%"
 
 rem Output help list.
-help >"%OUTDIR%\help.out.txt"
+help >"%VER%\help.out.txt"
 
 for /f "delims=" %%L in ('help') do (
   rem Search help supported commands.
@@ -31,7 +31,7 @@ for /f "delims=" %%L in ('help') do (
     for /f %%F in ("%%L") do (set exe=%%F)
     set out=%OUTDIR%\!exe!.txt
     echo !out!
-    if "%%F" == "SC" (
+    if "!exe!" == "SC" (
       echo Please enter 'y'.
       echo y | !exe! >"!out!"
     ) else (

@@ -1,0 +1,69 @@
+
+TASKLIST [/S システム [/U ユーザー名 [/P [パスワード]]]]
+         [/M [モジュール] | /SVC | /V] [/FI フィルター] [/FO 形式] [/NH]
+
+説明:
+    ローカルまたはリモートのシステムで実行されている
+    プロセスの一覧を表示します。
+
+パラメーター一覧:
+   /S    システム            接続するリモート システムを指定します。
+
+   /U    [ドメイン\]ユーザー コマンドを実行するユーザー コンテキストを
+                             指定します。
+
+   /P    [パスワード]        提供されたユーザー コンテキストのパスワードを
+                             指定します。省略された場合は、入力を要求します。
+
+   /M    [モジュール]        指定された EXE/DLL 名を使用しているタスクを
+                             すべて表示します。モジュール名が指定されない場合
+                             は、読み込まれているモジュールすべてを表示します。
+
+   /SVC                      各プロセスをホストしているサービスを表示します。
+
+   /V                        詳細なタスク情報を表示します。
+
+   /FI    フィルター       フィルターによって指定された、与えられた条件に一致
+                             するタスクを表示します。
+
+   /FO    形式               出力の形式を指定します。
+                             有効な値: "TABLE", "LIST", "CSV"。
+
+   /NH                       出力するときに、"カラム ヘッダー"を
+                             表示しないように指定します。
+                             "TABLE" と "CSV" のみ有効です。
+
+   /?                        このヘルプ メッセージを表示します。
+
+フィルター:
+    フィルター名     有効な演算子              有効な値
+    -----------    ---------------           --------------------------
+    STATUS          eq, ne                    RUNNING | 
+                                              NOT RESPONDING | UNKNOWN
+    IMAGENAME       eq, ne                    イメージ名
+    PID             eq, ne, gt, lt, ge, le    PID 値
+    SESSION         eq, ne, gt, lt, ge, le    セッション番号
+    SESSIONNAME     eq, ne                    セッション名
+    CPUTIME         eq, ne, gt, lt, ge, le    次の形式の CPU 時間
+                                              hh:mm:ss
+                                              hh - 時間,
+                                              mm - 分、ss - 秒
+    MEMUSAGE        eq, ne, gt, lt, ge, le    メモリ使用 (KB)
+    USERNAME        eq, ne                    [ドメイン\]ユーザーの形式の
+                                              形式
+    SERVICES        eq, ne                    サービス名
+    WINDOWTITLE     eq, ne                    ウィンドウ タイトル
+    MODULES         eq, ne                    DLL 名
+
+注意: リモート コンピューターを照会するときは、"WINDOWTITLE" フィルターと"STATUS" フィルターはサポートされません。
+
+例:
+    TASKLIST
+    TASKLIST /M
+    TASKLIST /V /FO CSV
+    TASKLIST /SVC /FO LIST
+    TASKLIST /M wbem*
+    TASKLIST /S システム /FO LIST
+    TASKLIST /S システム /U ドメイン\ユーザー名 /FO CSV /NH
+    TASKLIST /S システム /U ユーザー名 /P パスワード /FO TABLE /NH
+    TASKLIST /FI "USERNAME ne NT AUTHORITY\SYSTEM" /FI "STATUS eq running"

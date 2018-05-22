@@ -1,0 +1,35 @@
+
+SCHTASKS /パラメーター [引数] 
+
+説明:
+    管理者がローカルまたはリモートのシステム上のスケジュール タスクの作成、
+    削除、クエリ実行、変更、実行および終了を行います。
+
+パラメーターの一覧:
+    /Create         スケジュール タスクを新しく作成します。
+
+    /Delete         スケジュール タスクを削除します。
+
+    /Query          スケジュール タスクをすべて表示します。
+
+    /Change         スケジュール タスクのプロパティを変更します。
+
+    /Run            スケジュールされているタスクをオン デマンドで実行します。
+
+    /End            現在実行中のスケジュール タスクを停止します。
+
+    /ShowSid        スケジュールされたタスクの名前に対応するセキュリティ ID を
+                    表示します。
+
+    /?              このヘルプを表示します。
+
+Examples:
+    SCHTASKS 
+    SCHTASKS /?
+    SCHTASKS /Run /?
+    SCHTASKS /End /?
+    SCHTASKS /Create /?
+    SCHTASKS /Delete /?
+    SCHTASKS /Query  /?
+    SCHTASKS /Change /?
+    SCHTASKS /ShowSid /?

@@ -1,0 +1,10 @@
+
+Microsoft DiskPart バージョン 6.1.7601
+Copyright (C) 1999-2008 Microsoft Corporation.
+コンピューター: SENOOKEN-PC
+
+Microsoft DiskPart 構文:
+	diskpart [/s <スクリプト>] [/?]
+
+	/s <スクリプト> - DiskPart スクリプトを使用します。
+	/?              - このヘルプ画面を表示します。

@@ -1,0 +1,11 @@
+
+Microsoft DiskPart バージョン 10.0.14393.0
+
+Copyright (C) 1999-2013 Microsoft Corporation.
+コンピューター: DESKTOP-HS4GU65
+
+Microsoft DiskPart 構文:
+	diskpart [/s <スクリプト>] [/?]
+
+	/s <スクリプト> - DiskPart スクリプトを使用します。
+	/?              - このヘルプ画面を表示します。
