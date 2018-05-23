@@ -2,7 +2,7 @@
 :: \file      helplist.cmd
 :: \author    SENOO, Ken
 :: \copyright CC0
-:: \version   1.0.0
+:: \version   1.0.2
 :: \date      Created: 2018-05-22
 :: \date      Updated: 2018-05-23
 :: \brief     List cmd.exe standard commands help.
@@ -22,7 +22,8 @@ cd "%~p0"
 
 :: Replace `Microsoft Windows [Version x.x.xxxx]` to `x.x.xxxx`.
 for /f "delims=" %%V in ('ver') do set ver=%%V
-set ver=%ver:~27,-1%
+set ver=%ver:*[=%
+set ver=%ver:~8,-1%
 set OUTDIR=%ver%\help
 if not exist "%OUTDIR%" mkdir "%OUTDIR%"
 
@@ -31,7 +32,7 @@ help >"%ver%\help.out.txt"
 
 for /f "delims=" %%L in ('help') do (
   rem Search help supported commands.
-  echo %%L | findstr "^[A-Z]" >nul && (
+  echo %%L | findstr "^[A-Z][A-Z]" >nul && (
     for /f %%F in ("%%L") do (set exe=%%F)
     set out=%OUTDIR%\!exe!.txt
     echo !out!
