@@ -2,32 +2,36 @@
 :: \file      helplist.cmd
 :: \author    SENOO, Ken
 :: \copyright CC0
+:: \version   1.0.0
+:: \date      Created: 2018-05-22
+:: \date      Updated: 2018-05-23
 :: \brief     List cmd.exe standard commands help.
 :: \sa        https://senooken.jp/blog/2018///
 
 :: \details `help` has standard cmd.exe help.
-:: This command file lists all `help` supported commands help (<command>.txt) to `[Windows version]\help` directory ([Microsoft Windows ...]).
+:: This command file lists all `help` supported commands help (<command>.txt) to `<version>\help` directory.
 :: List of commands is listed in `help.out.txt`.
 
 :: \note Before run this file, turn UAC (User Account Control) to the lowest level or run as administrator for `diskpart`.
-:: \warn `sc` help is need to enter keyboard input y|n (not stdin!) in Windows 7 (Windows 10 has no problem).
+:: \warning `sc` help is need to enter keyboard input y|n (not stdin!) in Windows 7 (Windows 10 has no problem).
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 @echo off
 setlocal enabledelayedexpansion
 cd "%~p0"
 
-for /f "delims=" %%V in ('ver') do set VER=%%V
-set OUTDIR=%VER%\help
+:: Replace `Microsoft Windows [Version x.x.xxxx]` to `x.x.xxxx`.
+for /f "delims=" %%V in ('ver') do set ver=%%V
+set ver=%ver:~27,-1%
+set OUTDIR=%ver%\help
 if not exist "%OUTDIR%" mkdir "%OUTDIR%"
 
-rem Output help list.
-help >"%VER%\help.out.txt"
+:: Output help list.
+help >"%ver%\help.out.txt"
 
 for /f "delims=" %%L in ('help') do (
   rem Search help supported commands.
-  echo %%L | findstr "^[A-Z]" >nul
-  if not errorlevel 1 (
+  echo %%L | findstr "^[A-Z]" >nul && (
     for /f %%F in ("%%L") do (set exe=%%F)
     set out=%OUTDIR%\!exe!.txt
     echo !out!
