@@ -1,0 +1,97 @@
+バッチ プログラム中で条件処理を実行します。
+
+IF [NOT] ERRORLEVEL 番号 コマンド
+IF [NOT] 文字列1==文字列2 コマンド
+IF [NOT] EXIST ファイル名 コマンド
+
+  NOT               条件が偽の場合にだけ、Windows XP がコマンドを実行する
+                    ことを指定します。
+
+  ERRORLEVEL 番号   最後のプログラムの実行で指定された番号以上の終了コード
+                    が返されたときに、条件が真になるように指定します。
+
+  文字列1==文字列2  テキスト文字列が一致するときに条件が真になるように指定
+                    します。
+
+  EXIST ファイル名  指定したファイル名が存在するときに条件が真になるように
+                    指定します。
+
+  コマンド          条件が真のときに実行するコマンドを指定します。コマンドに
+                    続けて、ELSE キーワードの後、指定した条件が偽の場合に
+                    実行される ELSE コマンドを指定することができます。
+
+ELSE 節は、IF の後のコマンドと同じ行に置きます。
+例:
+
+    IF EXIST filename. (
+        del filename.
+    ) ELSE (
+        echo filename. missing.
+    )
+
+del コマンドは、改行で終了しなければならないため、次の例は、正しく動作し
+ません:
+
+    IF EXIST filename. del filename. ELSE echo filename. missing
+
+ELSE コマンドは、IF コマンドの終わりと同じ行で始まらなければならないため、
+次の例は正しく動作しません:
+
+    IF EXIST filename. del filename.
+    ELSE echo filename. missing
+
+次の例のように、すべてのコマンドを 1 行にすれば正しく動作します:
+
+    IF EXIST filename. (del filename.) ELSE echo filename. missing
+
+コマンド拡張機能を有効にすると、IF は次のように変更されます:
+
+    IF [/I] 文字列1 比較演算子 文字列2 コマンド
+    IF CMDEXTVERSION 番号 コマンド
+    IF DEFINED 変数 コマンド
+
+比較演算子は、次のいずれかです:
+
+    EQU - 等しい
+    NEQ - 等しくない
+    LSS - より小さい
+    LEQ - 以下
+    GTR - より大きい
+    GEQ - 以上
+
+/I スイッチを指定すると、文字列は、大文字と小文字を区別せずに比較され
+ます。/I スイッチは、IF の 文字列1==文字列2 形式で使うこともできます。
+この比較は汎用であり、文字列1 と 文字列2 が両方とも数字だけを含む場合
+は、文字列が数値に変換され、数値の比較が行われます。
+
+CMDEXTVERSION 条件は ERRORLEVEL と同様に動作しますが、コマンド拡張機能
+に関連付けられている内部バージョン番号との比較を行います。最初のバー
+ジョンは 1 です。コマンド拡張機能に重要な拡張が追加された場合は、値が 
+1 大きくなります。コマンド拡張機能が無効である場合は、CMDEXTVERSION は
+条件は常に偽です。
+
+DEFINED 条件は EXISTS と同様に動作しますが、環境変数名を受け取って、環境
+変数が定義されている場合は真を返します。
+
+%ERRORLEVEL% は、ERRORLEVEL の現在の値の文字列表記に展開されます。
+ただし、ERRORLEVEL という名前の環境変数が既に定義されている場合は、その
+環境変数の値が取得されます。プログラム実行後、次の例が ERRORLEVEL の使い方
+を説明しています:
+
+    goto answer%ERRORLEVEL%
+    :answer0
+    echo Program had return code 0
+    :answer1
+    echo Program had return code 1
+
+また、上の数値比較を使うこともできます:
+
+    IF %ERRORLEVEL% LEQ 1 goto okay
+
+%CMDCMDLINE% は、CMD.EXE が処理する前の、CMD.EXE に渡されたオリジナル
+のコマンド ラインに展開されます。ただし、CMDCMDLINE という名前の環境変数
+が既に定義されている場合は、その環境変数の値が取得されます。
+
+%CMDEXTVERSION% は、CMDEXTVERSION の現在の値の文字列表記に展開されます。
+ただし、CMDEXTVERSION という名前の環境変数が既に定義されている場合は、その
+環境変数の値が取得されます。

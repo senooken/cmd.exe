@@ -1,0 +1,118 @@
+
+[グローバル スイッチ] <command>
+
+次のグローバル スイッチが利用可能です:
+/NAMESPACE           エイリアスが操作する名前空間のパスです。
+/ROLE                エイリアスの定義を含む役割のパスです。
+/NODE                エイリアスが操作するサーバーです。
+/IMPLEVEL            クライアントの偽造レベルです。
+/AUTHLEVEL           クライアントの認証レベルです。
+/LOCALE              クライアントが使用する必要がある言語 ID です。
+/PRIVILEGES          特権のすべてを有効または無効にします。
+/TRACE               デバッグ情報を stderr に出力します。
+/RECORD              入力コマンドと出力のすべてをログに記録します。
+/INTERACTIVE         対話モードを設定またはリセットします。
+/FAILFAST            FailFast モードを設定またはリセットします。
+/USER                セッションの間使用するユーザーです。
+/PASSWORD            セッション ログオンに使用されるパスワードです。
+/OUTPUT              出力リダイレクトのモードを指定します。
+/APPEND              出力リダイレクトを指定します。
+/AGGREGATE           集合体モードを設定またはリセットします。
+/AUTHORITY           接続の <証明機関の種類> を指定します。
+/?[:<BRIEF|FULL>]    使用法の情報です。
+
+特定のグローバル スイッチの詳細については、 switch-name /? と入力してください。
+
+
+次のエイリアスが現在の役割で利用可能です:
+ALIAS                    - ローカル システムのエイリアス ボリュームにアクセスします。
+BASEBOARD                - ベース ボード (マザーボードまたはシステム ボード) の管理です。
+BIOS                     - 基本入出力 (BIOS) 管理です。
+BOOTCONFIG               - ブート構成管理です。
+CDROM                    - CD-ROM 管理です。
+COMPUTERSYSTEM           - コンピューター システム管理です。
+CPU                      - CPU 管理です。
+CSPRODUCT                - SMBIOS からのコンピューター システム製品情報です。
+DATAFILE                 - データ ファイル管理です。
+DCOMAPP                  - DCOM アプリケーションの管理です。
+DESKTOP                  - ユーザーのデスクトップ管理です。
+DESKTOPMONITOR           - デスクトップ モニターの管理です。
+DEVICEMEMORYADDRESS      - デバイス メモリ アドレスの管理です。
+DISKDRIVE                - 物理ディスク ドライブの管理です。
+DISKQUOTA                - NTFS ボリュームのディスク領域の使用です。
+DMACHANNEL               - ダイレクト メモリ アクセス (DMA) チャンネル管理です。
+ENVIRONMENT              - システム環境設定の管理です。
+FSDIR                    - ファイル システム ディレクトリ エントリの管理です。
+GROUP                    - グループ アカウントの管理です。
+IDECONTROLLER            - IDE コントローラー管理です。
+IRQ                      - 割り込み要求 (IRQ) の管理です。
+JOB                      - スケジュール サービスを使用してスケジュールされたジョブへのアクセスを提供します。
+LOADORDER                - 実行依存関係を定義するシステム サービスの管理です。
+LOGICALDISK              - ローカル記憶装置管理です。
+LOGON                    - ログオン セッションです。
+MEMCACHE                 - キャッシュ メモリ管理です。
+MEMORYCHIP               - メモリ チップの情報です。
+MEMPHYSICAL              - コンピューター システムの物理メモリの管理です。
+NETCLIENT                - ネットワーク クライアント管理です。
+NETLOGIN                 - ネットワーク ログイン情報 (特定のユーザーの) の管理です。
+NETPROTOCOL              - プロトコル (およびそのネットワーク特性) 管理です。
+NETUSE                   - アクティブ状態のネットワーク管理です。
+NIC                      - ネットワーク インターフェイス コントローラー (NIC) の管理です。
+NICCONFIG                - ネットワーク アダプターの管理です。
+NTDOMAIN                 - NT ドメイン管理です。
+NTEVENT                  - NT イベント ログのエントリです。
+NTEVENTLOG               - NT イベント ログ ファイルの管理です。
+ONBOARDDEVICE            - マザーボード (システム ボード) にビルトインされている共通アダプター デバイスの管理です。
+OS                       - インストールされたオペレーティング システムの管理です。
+PAGEFILE                 - スワップされている仮想メモリ ファイルの管理です。
+PAGEFILESET              - ページ ファイル設定管理です。
+PARTITION                - 物理ディスクのパーティションされた領域の管理です。
+PORT                     - I/O ポート管理です。
+PORTCONNECTOR            - 物理接続ポートの管理です。
+PRINTER                  - プリンター デバイスの管理です。
+PRINTERCONFIG            - プリンター デバイス構成の管理です。
+PRINTJOB                 - 印刷ジョブの管理です。
+PROCESS                  - 処理管理です。
+PRODUCT                  - インストール パッケージ タスクの管理です。
+QFE                      - QFE (Quick Fix Engineering) です。  
+QUOTASETTING             - ボリュームのディスク クォータの設定情報です。
+RDACCOUNT                - リモート デスクトップ接続のアクセス許可管理です。
+RDNIC                    - 特定のネットワーク アダプターでのリモート デスクトップ接続の管理です。
+RDPERMISSIONS            - 特定のリモート デスクトップ接続のアクセス許可です。
+RDTOGGLE                 - リモート デスクトップ リスナーをリモートでオンまたはオフにします。
+RECOVEROS                - オペレーティング システムにエラーが発生するときにメモリから収集される情報です。
+REGISTRY                 - コンピューター システムのレジストリの管理です。
+SCSICONTROLLER           - SCSI コントローラー管理です。
+SERVER                   - サーバー情報の管理です。
+SERVICE                  - サービス アプリケーションの管理です。
+SHADOWCOPY               - シャドウ コピーの管理です。
+SHADOWSTORAGE            - シャドウ コピーの記憶域の管理です。
+SHARE                    - 共有リソース管理です。
+SOFTWAREELEMENT          - システムにインストールされているソフトウェア製品の要素の管理です。
+SOFTWAREFEATURE          - ソフトウェア要素のソフトウェア製品サブセットの管理です。
+SOUNDDEV                 - サウンド デバイス管理です。
+STARTUP                  - ユーザーがコンピューター システムにログオンするときに自動的に実行するコマンドの管理です。
+SYSACCOUNT               - システム アカウント管理です。
+SYSDRIVER                - 基本サービスのシステム ドライバーの管理です。
+SYSTEMENCLOSURE          - 物理的システム格納装置管理です。
+SYSTEMSLOT               - ポート、マザーボード スロットと周辺機器、専用接続ポイントを含む物理的接続ポイントの管理です。
+TAPEDRIVE                - テープ ドライブ管理です。
+TEMPERATURE              - 温度センサー (電気温度計) のデータ管理です。
+TIMEZONE                 - タイム ゾーン データ管理です。
+UPS                      - 無停電電源装置 (UPS) の管理です。
+USERACCOUNT              - ユーザー アカウント管理です。
+VOLTAGE                  - 電圧センサー (電気電圧計) のデータ管理です。
+VOLUME                   - ローカル記憶域ボリュームの管理です。
+VOLUMEQUOTASETTING       - ディスク クォータ設定を特定のディスク領域に関連付けます。
+VOLUMEUSERQUOTA          - ユーザーごとの記憶域ボリューム クォータの管理です。
+WMISET                   - WMI サービスの操作パラメーター管理です。
+
+特定のエイリアスについての詳細は、alias /? と入力してください。
+
+CLASS     - 完全な WMI スキーマにエスケープします。
+PATH      - WMI オブジェクトの完全なパスにエスケープします。
+CONTEXT   - グローバル スイッチすべての状態を表示します。
+QUIT/EXIT - プログラムを終了します。
+
+CLASS/PATH/CONTEXT の詳細については、(CLASS | PATH | CONTEXT) /? と入力してください。
+

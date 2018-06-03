@@ -1,0 +1,18 @@
+システム デバイスを設定します。
+
+シリアル ポート:   MODE COMm[:] [BAUD=b] [PARITY=p] [DATA=d] [STOP=s]
+                                [to=on|off] [xon=on|off] [odsr=on|off]
+                                [octs=on|off] [dtr=on|off|hs]
+                                [rts=on|off|hs|tg] [idsr=on|off]
+
+デバイス状態:      MODE [デバイス] [/STATUS]
+
+リダイレクト印刷:  MODE LPTn[:]=COMm[:]
+
+コード ページ選択: MODE CON[:] CP SELECT=yyy
+
+コード ページ状態: MODE CON[:] CP [/STATUS]
+
+表示モード:        MODE CON[:] [COLS=c] [LINES=n]
+
+キーボード速度:    MODE CON[:] [RATE=r DELAY=d]

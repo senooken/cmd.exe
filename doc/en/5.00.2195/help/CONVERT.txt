@@ -1,0 +1,8 @@
+Converts FAT volumes to NTFS.
+
+CONVERT volume /FS:NTFS [/V]
+
+  volume      Specifies the drive letter (followed by a colon),
+              mount point, or volume name.
+  /FS:NTFS    Specifies that the volume to be converted to NTFS.
+  /V          Specifies that Convert should be run in verbose mode.

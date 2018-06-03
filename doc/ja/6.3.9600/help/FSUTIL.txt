@@ -1,0 +1,18 @@
+---- サポートされるコマンド ----
+
+8dot3name       8dot3name 管理
+behavior        ファイル システムの動作の制御
+dirty           ボリュームの dirty ビットの管理
+file            ファイルに固有のコマンド
+fsinfo          ファイル システム情報
+hardlink        ハードリンクの管理
+objectid        オブジェクト ID の管理
+quota           クォータの管理
+repair          自己復旧の管理
+reparsepoint    再解析ポイントの管理
+resource        トランザクション リソース マネージャーの管理
+sparse          スパース ファイルの制御
+transaction     トランザクションの管理
+usn             USN の管理
+volume          ボリュームの管理
+wim             透過的な wim ホスティングの管理

@@ -1,0 +1,44 @@
+
+ ’ˆÓ: Cacls ‚ÍŽg—p‚³‚ê‚È‚­‚È‚è‚Ü‚µ‚½BIcacls ‚ðŽg—p‚µ‚Ä‚­‚¾‚³‚¢B
+ 
+ CACLS ƒtƒ@ƒCƒ‹–¼ [/T] [/M] [/L] [/S[:SDDL]] [/E] [/C]
+                   [/G ƒ†[ƒU[–¼:ƒAƒNƒZƒXŒ ] [/R ƒ†[ƒU[–¼ [...]]
+                   [/P ƒ†[ƒU[–¼:ƒAƒNƒZƒXŒ  [...]] [/D ƒ†[ƒU[–¼ [...]]
+    ƒtƒ@ƒCƒ‹–¼     ACL ‚ð•\Ž¦‚µ‚Ü‚·B
+    /T             Œ»Ý‚ÌƒfƒBƒŒƒNƒgƒŠ‚Æ‚·‚×‚Ä‚ÌƒTƒuƒfƒBƒŒƒNƒgƒŠ‚É‚ ‚é
+                   Žw’è‚³‚ê‚½ƒtƒ@ƒCƒ‹‚Ì ACL ‚ð•ÏX‚µ‚Ü‚·B
+    /L             ƒ^[ƒQƒbƒg‚Å‚Í‚È‚­ƒVƒ“ƒ{ƒŠƒbƒN ƒŠƒ“ƒNŽ©‘Ì‚Å“®ì‚µ‚Ü‚·
+    /M             ƒfƒBƒŒƒNƒgƒŠ‚Éƒ}ƒEƒ“ƒg‚³‚ê‚½ƒ{ƒŠƒ…[ƒ€‚Ì ACL ‚ð•ÏX‚µ‚Ü‚·
+    /S             DACL ‚Ì SDDL •¶Žš—ñ‚ð•\Ž¦‚µ‚Ü‚·B
+    /S:SDDL        ACL ‚ð SDDL •¶Žš—ñ‚ÅŽw’è‚³‚ê‚½‚à‚Ì‚Å’u‚«Š·‚¦‚Ü‚·
+                   (/EA/GA/RA/PA‚Ü‚½‚Í /D ‚Å‚Í–³Œø)B
+    /E             ACL ‚ð’u‚«Š·‚¦‚¸‚É•ÒW‚µ‚Ü‚·B
+    /C             ƒAƒNƒZƒX‹‘”ÛƒGƒ‰[‚ð–³Ž‹‚µ‚ÄAƒAƒNƒZƒX‚ð‘±s‚µ‚Ü‚·B
+    /G ƒ†[ƒU[–¼:ƒAƒNƒZƒXŒ 
+                   Žw’è‚³‚ê‚½ƒ†[ƒU[‚ÉƒAƒNƒZƒXŒ ‚ð—^‚¦‚Ü‚·B
+                   ƒAƒNƒZƒXŒ : R  “Ç‚ÝŽæ‚è
+                               W  ‘‚«ž‚Ý
+                               C  •ÏX (‘‚«ž‚Ý)
+                               F  ƒtƒ‹ ƒRƒ“ƒgƒ[ƒ‹
+    /R ƒ†[ƒU[–¼
+                   Žw’è‚³‚ê‚½ƒ†[ƒU[‚ÌƒAƒNƒZƒXŒ ‚ðŽ¸Œø‚³‚¹‚Ü‚·
+                   (/E ƒIƒvƒVƒ‡ƒ“‚Æ‹¤‚ÉŽg—p)B
+    /P ƒ†[ƒU[–¼:ƒAƒNƒZƒXŒ 
+                   Žw’è‚³‚ê‚½ƒ†[ƒU[‚ÌƒAƒNƒZƒXŒ ‚ð’u‚«Š·‚¦‚Ü‚·B
+                   ƒAƒNƒZƒXŒ : N  ‚È‚µ
+                               R  “Ç‚ÝŽæ‚è
+                               W  ‘‚«ž‚Ý
+                               C  •ÏX (‘‚«ž‚Ý)
+                               F  ƒtƒ‹ ƒRƒ“ƒgƒ[ƒ‹
+    /D ƒ†[ƒU[–¼  Žw’è‚³‚ê‚½ƒ†[ƒU[‚ÌƒAƒNƒZƒX‚ð‹‘”Û‚µ‚Ü‚·B
+ •¡”‚Ìƒtƒ@ƒCƒ‹‚ðŽw’è‚·‚é‚É‚ÍAƒƒCƒ‹ƒhƒJ[ƒh‚ðŽg—p‚Å‚«‚Ü‚·B
+ •¡”‚Ìƒ†[ƒU[‚ðŽw’è‚Å‚«‚Ü‚·B
+ 
+ È—ªŒ`:
+    CI - ƒRƒ“ƒeƒiŒp³B
+         ACE ‚ÍƒfƒBƒŒƒNƒgƒŠ‚ÉŒp³‚³‚ê‚Ü‚·B
+    OI - ƒIƒuƒWƒFƒNƒgŒp³B
+         ACE ‚Íƒtƒ@ƒCƒ‹‚ÉŒp³‚³‚ê‚Ü‚·B
+    IO - Œp³‚Ì‚ÝB
+         ACE ‚ÍŒ»Ý‚Ìƒtƒ@ƒCƒ‹/ƒfƒBƒŒƒNƒgƒŠ‚É“K—p‚³‚ê‚Ü‚¹‚ñB
+    ID•Êp÷

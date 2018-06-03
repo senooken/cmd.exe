@@ -1,0 +1,8 @@
+Windows がグラフィック モードで拡張文字セットを表示
+できるようにします。
+
+GRAFTABL [xxx]
+GRAFTABL /STATUS
+
+   xxx      コード ページ番号を指定します。
+   /STATUS  GRAFTABL のために現在選択されているコード ページを表示します。

@@ -1,0 +1,3 @@
+Displays the Windows 2000 version.
+
+VER

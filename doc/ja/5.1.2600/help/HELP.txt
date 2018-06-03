@@ -1,0 +1,5 @@
+Windows XP コマンドのヘルプ情報を提供します。
+
+HELP [command]
+
+    command - このコマンドのヘルプ情報を表示します。

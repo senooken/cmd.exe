@@ -1,0 +1,33 @@
+バッチ ファイルで環境変更のローカル化を開始します。SETLOCAL を実行した後で
+変更した環境設定は、そのバッチ ファイルだけで有効です。前の設定を復元するときは
+ENDLOCAL を実行しなければなりません。バッチ スクリプトの終わりに達したとき、
+暗示的な ENDLOCAL が、そのバッチ スクリプトによって発行されたすべての未完了の
+SETLOCAL コマンドのために実行されます。
+
+SETLOCAL
+
+コマンド拡張機能を有効にすると、SETLOCAL は次のように変更されます:
+
+SETLOCAL バッチ コマンドは、オプション引数を受け取ることができます:
+        ENABLEEXTENSIONS / DISABLEEXTENSIONS
+            は、コマンド処理機能を有効または無効にできます。詳細に
+            ついては、CMD /? を参照してください。
+        ENABLEDELAYEDEXPANSION / DISABLEDELAYEDEXPANSION
+            は、遅延環境変数の展開を有効または無効にできます。詳細
+            については、SET /? を参照してください。
+これらの変更は、SETLOCAL コマンドの実行前の設定にかかわらず、対応する 
+ENDLOCAL コマンドを実行するまで継続されます。
+
+SETLOCAL コマンドに引数を指定すると、ERRORLEVEL の値が設定されます。
+2 つの有効な引数が指定された場合は 0、指定されない場合は 1 になります。
+この機能をバッチ スクリプトで使って、拡張機能が利用可能かどうかを判断
+することができます。それには、次のように入力します:
+
+    VERIFY OTHER 2>nul
+    SETLOCAL ENABLEEXTENSIONS
+    IF ERRORLEVEL 1 echo 拡張機能を有効にできません
+
+この方法が使えるのは、古いバージョンの CMD.EXE では、SETLOCAL は 
+ERRORLEVEL の値を設定しないためです。
+VERIFY コマンドに誤った引数を指定すると、
+ERRORLEVEL の値は 0 以外の値に初期化されます。

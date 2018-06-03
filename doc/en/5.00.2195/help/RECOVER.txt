@@ -1,0 +1,5 @@
+Recovers readable information from a bad or defective disk.
+
+RECOVER [drive:][path]filename
+Consult the online Command Reference in Windows 2000 Help
+before using the RECOVER command.

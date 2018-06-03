@@ -1,0 +1,6 @@
+Provides help information for Windows 2000 commands.
+
+HELP [command]
+
+    command - displays help information on that command.
+

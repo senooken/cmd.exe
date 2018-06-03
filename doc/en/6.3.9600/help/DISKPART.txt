@@ -1,0 +1,11 @@
+
+Microsoft DiskPart version 6.3.9600
+
+Copyright (C) 1999-2013 Microsoft Corporation.
+On computer: WINDOWS81
+
+Microsoft DiskPart syntax:
+	diskpart [/s <script>] [/?]
+
+	/s <script> - Use a DiskPart script.
+	/?          - Show this help screen.

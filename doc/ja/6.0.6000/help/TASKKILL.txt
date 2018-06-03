@@ -1,0 +1,67 @@
+
+TASKKILL [/S システム [/U ユーザー名 [/P [パスワード]]]]
+         { [/FI フィルタ] [/PID プロセスID | /IM イメージ名] } [/T] [/F]
+
+説明:
+    このツールは、プロセス ID (PID) またはイメージ名を指定して、タスクを終了するために使われます。
+
+パラメータ一覧:
+    /S    システム            接続するリモート システムを指定します。
+
+    /U    [ドメイン\]ユーザー コマンドが実行されるユーザー コンテキストを
+                              指定します。
+
+    /P    [パスワード]        提供されるユーザー コンテキストのパスワードを
+                              指定します。省略された場合は、入力を要求します。
+
+    /FI   フィルタ            タスクを選択するために、フィルタを適用します。
+                              "*" を使用できます。例: imagename eq acme*
+
+    /PID   プロセスID         終了させるプロセスの PID を指定します。
+                              PID を取得するには、TaskList を使用してください。
+
+    /IM    イメージ名         終了させるプロセスのイメージ名を指定します。
+                              すべてのタスクやイメージ名を指定するには、
+                              ワイルドカード '*' を使います。
+
+    /T                        指定したプロセスとそのプロセスが開始
+                              したすべての子プロセスを削除します。
+
+    /F                        プロセスの強制終了を指定します。
+
+    /?                        このヘルプ メッセージを表示します。
+
+フィルタ:
+    フィルタ名    有効な演算子              有効な値
+    -----------   ---------------           -------------------------
+    STATUS        eq, ne                    RUNNING |
+                                            NOT RESPONDING | UNKNOWN
+    IMAGENAME     eq, ne                    イメージ名
+    PID           eq, ne, gt, lt, ge, le    PID 値
+    SESSION       eq, ne, gt, lt, ge, le    セッション番号です。
+    CPUTIME       eq, ne, gt, lt, ge, le    次の形式の CPU 時間
+                                            hh:mm:ss
+                                            hh - 時間
+                                            mm - 分、ss - 秒
+    MEMUSAGE      eq, ne, gt, lt, ge, le    メモリ使用量 (KB)
+    USERNAME      eq, ne                    [ドメイン\]ユーザーの形式の
+                                            ユーザー名です
+    MODULES       eq, ne                    DLL 名
+    SERVICES      eq, ne                    サービス名
+    WINDOWTITLE   eq, ne                    ウィンドウのタイトル
+
+    注意
+    ----
+    1) /IM スイッチのワイルドカード '*' は、フィルタを適用したときのみ許可され
+       ます。
+    2) リモート プロセスの終了は、必ず強制的に行われます。(/F)
+    3) リモート コンピュータが指定されているときは、"WINDOWTITLE"フィルタと
+       "STATUS" フィルタは考慮されません。
+例:
+    TASKKILL /IM notepad.exe
+    TASKKILL /PID 1230 /PID 1241 /PID 1253 /T
+    TASKKILL /F /IM cmd.exe /T 
+    TASKKILL /F /FI "PID ge 1000" /FI "WINDOWTITLE ne untitle*"
+    TASKKILL /F /FI "USERNAME eq NT AUTHORITY\SYSTEM" /IM notepad.exe
+    TASKKILL /S system /U domain\username /FI "USERNAME ne NT*" /IM *
+    TASKKILL /S system /U username /P password /FI "IMAGENAME eq note*"

@@ -1,0 +1,89 @@
+Name	2000	XP	Vista	7	8	8.1	10
+Version	5.00.2195	5.1.2600	6.0.6000	6.1.7601	6.2.9200	6.3.9600	10.0.14393
+ASSOC	o	o	o	o	o	o	o
+AT	o	o					
+ATTRIB	o	o	o	o	o	o	o
+BCDEDIT			o	o	o	o	o
+BREAK	o	o	o	o	o	o	o
+CACLS	o	o	o	o	o	o	o
+CALL	o	o	o	o	o	o	o
+CD	o	o	o	o	o	o	o
+CHCP	o	o	o	o	o	o	o
+CHDIR	o	o	o	o	o	o	o
+CHKDSK	o	o	o	o	o	o	o
+CHKNTFS	o	o	o	o	o	o	o
+CLS	o	o	o	o	o	o	o
+CMD	o	o	o	o	o	o	o
+COLOR	o	o	o	o	o	o	o
+COMP	o	o	o	o	o	o	o
+COMPACT	o	o	o	o	o	o	o
+CONVERT	o	o	o	o	o	o	o
+COPY	o	o	o	o	o	o	o
+DATE	o	o	o	o	o	o	o
+DEL	o	o	o	o	o	o	o
+DIR	o	o	o	o	o	o	o
+DISKCOMP	o	o	o	o	o	o	
+DISKCOPY	o	o	o	o	o	o	
+DISKPART			o	o	o	o	o
+DOSKEY	o	o	o	o	o	o	o
+DRIVERQUERY			o	o	o	o	o
+ECHO	o	o	o	o	o	o	o
+ENDLOCAL	o	o	o	o	o	o	o
+ERASE	o	o	o	o	o	o	o
+EXIT	o	o	o	o	o	o	o
+FC	o	o	o	o	o	o	o
+FIND	o	o	o	o	o	o	o
+FINDSTR	o	o	o	o	o	o	o
+FOR	o	o	o	o	o	o	o
+FORMAT	o	o	o	o	o	o	o
+FSUTIL			o	o	o	o	o
+FTYPE	o	o	o	o	o	o	o
+GOTO	o	o	o	o	o	o	o
+GPRESULT			o	o	o	o	o
+GRAFTABL	o	o	o	o	o	o	o
+HELP	o	o	o	o	o	o	o
+ICACLS			o	o	o	o	o
+IF	o	o	o	o	o	o	o
+LABEL	o	o	o	o	o	o	o
+MD	o	o	o	o	o	o	o
+MKDIR	o	o	o	o	o	o	o
+MKLINK			o	o	o	o	o
+MODE	o	o	o	o	o	o	o
+MORE	o	o	o	o	o	o	o
+MOVE	o	o	o	o	o	o	o
+OPENFILES			o	o	o	o	o
+PATH	o	o	o	o	o	o	o
+PAUSE	o	o	o	o	o	o	o
+POPD	o	o	o	o	o	o	o
+PRINT	o	o	o	o	o	o	o
+PROMPT	o	o	o	o	o	o	o
+PUSHD	o	o	o	o	o	o	o
+RD	o	o	o	o	o	o	o
+RECOVER	o	o	o	o	o	o	o
+REM	o	o	o	o	o	o	o
+REN	o	o	o	o	o	o	o
+RENAME	o	o	o	o	o	o	o
+REPLACE	o	o	o	o	o	o	o
+RMDIR	o	o	o	o	o	o	o
+ROBOCOPY			o	o	o	o	o
+SC			o	o	o	o	o
+SCHTASKS			o	o	o	o	o
+SET	o	o	o	o	o	o	o
+SETLOCAL	o	o	o	o	o	o	o
+SHIFT	o	o	o	o	o	o	o
+SHUTDOWN			o	o	o	o	o
+SORT	o	o	o	o	o	o	o
+START	o	o	o	o	o	o	o
+SUBST	o	o	o	o	o	o	o
+SYSTEMINFO			o	o	o	o	o
+TASKKILL			o	o	o	o	o
+TASKLIST			o	o	o	o	o
+TIME	o	o	o	o	o	o	o
+TITLE	o	o	o	o	o	o	o
+TREE	o	o	o	o	o	o	o
+TYPE	o	o	o	o	o	o	o
+VER	o	o	o	o	o	o	o
+VERIFY	o	o	o	o	o	o	o
+VOL	o	o	o	o	o	o	o
+WMIC			o	o	o	o	o
+XCOPY	o	o	o	o	o	o	o
